@@ -1,2 +1,2 @@
 # OTUS_course_Python
-Repo for otus course "Python Developer. Basic"
+Repo for Otus course "Python Developer. Basic"
