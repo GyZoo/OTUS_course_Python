@@ -4,8 +4,8 @@
 """
 
 
-def power_numbers():
-
+def power_numbers(*numbers):
+    return [number ** 2 for number in numbers]
     """
     функция, которая принимает N целых чисел,
     и возвращает список квадратов этих чисел
@@ -17,10 +17,24 @@ def power_numbers():
 # filter types
 ODD = "odd"
 EVEN = "even"
-# PRIME = "prime"
+PRIME = "prime"
+
+def is_prime(number):
+    for i in range(2, int(number ** 0.5) + 1):
+        if number % i == 0:
+            return False
+    return number > 1
 
 
-def filter_numbers():
+def filter_numbers(numbers, type):
+    if type == ODD:
+        return [number for number in numbers if number % 2 != 0] #
+    elif type == EVEN:
+        return [number for number in numbers if number % 2 == 0]
+    elif type == PRIME:
+        return list(filter(is_prime, numbers))
+
+    
     """
     функция, которая на вход принимает список из целых чисел,
     и возвращает только чётные/нечётные/простые числа
