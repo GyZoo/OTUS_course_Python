@@ -2,10 +2,7 @@
 create dataclass `Engine`
 """
 
-import dataclasses
-
-
-@dataclasses
+@dataclass
 class Engine:
     volume: float
     pistons: int
